@@ -6,10 +6,8 @@ Sistema de Gestión de Ventas
 """
 
 import os
-from modulo ingresar_ventas
+from modulo import ingresar_ventas
 
-def ingresar_ventas(lista_ventas):
-    pass
     
 
 def limpiar_pantalla():
@@ -22,6 +20,7 @@ def pausar():
 
 #Menú Principal
 def menu():
+    ventas = []
     while True: 
         print("\n---- Menú Principal ----")
         print("1. Ingresar Ventas de cursos UMCA")
