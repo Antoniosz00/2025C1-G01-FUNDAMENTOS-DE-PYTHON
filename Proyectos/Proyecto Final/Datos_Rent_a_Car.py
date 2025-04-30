@@ -131,7 +131,7 @@ def menu():
         print("6. Comparar reservas Europa vs EEUU")
         print("7. Ver todos los datos")
         print("8. Ver cantidad de rentas por mes")
-        print("9. Ver gráfico de rentas por mes")  # nueva opción
+        print("9. Ver gráfico de rentas por mes")  
         print("10. Salir")
         opcion = input("Seleccione una opción: ")
 
