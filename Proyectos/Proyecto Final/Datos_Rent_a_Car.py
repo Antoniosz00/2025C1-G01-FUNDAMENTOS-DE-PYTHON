@@ -22,7 +22,7 @@ def pausar():
 # Cargar datos desde archivo CSV
 def cargar_datos(nombre_archivo):
     try:
-        df = pd.read_csv(nombre_archivo, sep=';', encoding='utf-8')
+        df = pd.read_csv(nombre_archivo, sep=';', encoding='utf-8') #El archivo tiene los datos separados por ";"
         return df
     except FileNotFoundError:
         print("Archivo no encontrado.")
@@ -30,7 +30,7 @@ def cargar_datos(nombre_archivo):
 
 # Mostrar las ciudadanías más frecuentes entre los clientes
 def mostrar_paises(df):
-    print("\nPaíses (ordenados por frecuencia):")
+    print("\nPaíses:")
     for pais, cantidad in df["País"].value_counts().items():
         print(f"{pais}: {cantidad}")
 
@@ -123,14 +123,14 @@ def menu():
     while True:
         limpiar_pantalla()
         print("\n--- Análisis de Reservas ---")
-        print("1. Países más frecuentes")
+        print("1. Nacionalidades más frecuentes")
         print("2. Números de vuelo más frecuentes")
         print("3. Modelos de vehículo más rentados")
         print("4. Promedio de duración de la renta")
-        print("5. Día de anticipo de la renta")
+        print("5. Día de anticipo a reservación")
         print("6. Comparar reservas Europa vs EEUU")
         print("7. Ver todos los datos")
-        print("8. Ver cantidad de rentas por mes")
+        print("8. Ver cantidad de reservas por mes")
         print("9. Ver gráfico de rentas por mes")  
         print("10. Salir")
         opcion = input("Seleccione una opción: ")
